@@ -11,6 +11,7 @@ import ProductFormPage from './pages/ProductFormPage';
 import ProductsPage from './pages/ProductsPage';
 import CartPage from './pages/CartPage';
 import Checkout from './components/CheckoutComponents/Checkout';
+import AboutPage from './pages/AboutPage';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -20,6 +21,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path='/' component={HomePage} />
+          <Route exact path='/about' component={AboutPage} />
           <Route exact path='/productform' component={ProductFormPage} />
           <Route exact path='/signup' component={SignUpPage} />
           <Route exact path='/login' component={LoginPage} />

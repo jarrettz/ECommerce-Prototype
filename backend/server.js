@@ -1,4 +1,4 @@
-require("dotenv").config();
+//require("dotenv").config();
 
 const express = require('express');
 const app = express();
@@ -8,7 +8,10 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.DATABASE_URL, { 
+const uri = "mongodb+srv://dbuser:Password123@cluster0.5mdym.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+//mongoose.connect(process.env.DATABASE_URL, { 
+mongoose.connect(uri, { 
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,

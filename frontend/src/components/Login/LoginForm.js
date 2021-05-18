@@ -19,7 +19,7 @@ const LoginForm = () => {
 
     AuthService.login(username, password).then(
       () => {
-        history.push("/dashboard");
+        history.push("/");
         window.location.reload();
       },
       (error) => {
