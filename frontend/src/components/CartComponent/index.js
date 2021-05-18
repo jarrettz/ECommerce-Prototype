@@ -28,9 +28,11 @@ const CartComponent = () => {
   )
 
   useEffect(() => {
-    filteredProducts.map(product=>
-      setTotalPrice(totalPrice + parseFloat(product.price))
-    )
+    let total = 0;
+    cart.forEach((product) => {
+        total += parseFloat(product.price);
+    });
+    setTotalPrice(total);
   }, [cart])
 
   return (
